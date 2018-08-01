@@ -12,7 +12,7 @@ restService.use(bodyParser.urlencoded({
 restService.use(bodyParser.json());
 
 restService.post('/find', function(req, res) {
-    var speech = req.body.result && req.body.result.parameters && req.body.result.parameters.product-material ? req.body.result.parameters.product-material : "Seems like there's a problem with the material. Speak again."
+    var speech = req.body.result && req.body.result.parameters && req.body.result.parameters.productMaterial ? req.body.result.parameters.productMaterial : "Seems like there's a problem with the material. Speak again."
     return res.json({
         speech: speech,
         displayText: speech,
